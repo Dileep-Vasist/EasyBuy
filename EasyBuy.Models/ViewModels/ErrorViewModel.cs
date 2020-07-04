@@ -1,6 +1,6 @@
 using System;
 
-namespace EasyBuy.Models
+namespace EasyBuy.Models.ViewModels
 {
     public class ErrorViewModel
     {
