@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 using EasyBuy.DataAccess.Repository.IRepository;
 using EasyBuy.Models;
 using EasyBuy.Models.ViewModels;
+using EasyBuy.Utility;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.ActionConstraints;
@@ -16,6 +18,7 @@ using SQLitePCL;
 namespace EasyBuy.Areas.Admin.Controllers
 {
     [Area("Admin")]
+    [Authorize(Roles = StaticDetails.Role_Admin)]
     public class ProductController : Controller
     {
         private readonly IUnitOfWork _unitOfWork;

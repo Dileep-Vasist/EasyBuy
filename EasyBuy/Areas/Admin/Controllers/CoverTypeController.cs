@@ -6,6 +6,7 @@ using Dapper;
 using EasyBuy.DataAccess.Repository.IRepository;
 using EasyBuy.Models;
 using EasyBuy.Utility;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.ActionConstraints;
 using Microsoft.VisualStudio.Web.CodeGeneration.Contracts.Messaging;
@@ -14,6 +15,7 @@ using SQLitePCL;
 namespace EasyBuy.Areas.Admin.Controllers
 {
     [Area("Admin")]
+    [Authorize(Roles = StaticDetails.Role_Admin)]
     public class CoverTypeController : Controller
     {
         private readonly IUnitOfWork _unitOfWork;
