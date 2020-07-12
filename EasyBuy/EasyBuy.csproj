@@ -22,4 +22,8 @@
     <ProjectReference Include="..\EasyBuy.Utility\EasyBuy.Utility.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="wwwroot\Images\Products\" />
+  </ItemGroup>
+
 </Project>
